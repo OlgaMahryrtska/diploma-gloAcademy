@@ -3,15 +3,14 @@ window.addEventListener("DOMContentLoaded", () => {
 const modal = document.querySelector('.modal-callback'),
       modalOverlay = document.querySelector('.modal-overlay'),
       modalClose = document.querySelector('.modal-close'),
-      callbackBtn = document.querySelectorAll('.callback-btn');   
-      
+      callbackBtn = document.querySelectorAll('.callback-btn'),
+      btnServices = document.querySelector('.button-services');       
       
 
   callbackBtn.forEach(elem => {
   elem.addEventListener('click', (event)=>{
     event.preventDefault();
-    modal.style.display='block'
-    modalOverlay.style.display='block'
+    openModal();   
   })
    
  });
@@ -19,8 +18,13 @@ const modal = document.querySelector('.modal-callback'),
     modal.style.display="none";
     modalOverlay.style.display='none'
  }
- modalClose.addEventListener('click',closeModal)
- modalOverlay.addEventListener('click',closeModal)
+ const openModal =()=>{
+    modal.style.display='block'
+    modalOverlay.style.display='block'
+ }
+ btnServices.addEventListener('click', openModal);
+ modalClose.addEventListener('click',closeModal);
+ modalOverlay.addEventListener('click',closeModal);
 
  // open sections using menu
  const goToSections =()=>{
