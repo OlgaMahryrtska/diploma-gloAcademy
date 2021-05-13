@@ -4,6 +4,8 @@ const modal = document.querySelector('.modal-callback'),
       modalOverlay = document.querySelector('.modal-overlay'),
       modalClose = document.querySelector('.modal-close'),
       callbackBtn = document.querySelectorAll('.callback-btn');
+         
+      
       
 
   callbackBtn.forEach(elem => {
@@ -14,16 +16,26 @@ const modal = document.querySelector('.modal-callback'),
   })
    
  });
- modalClose.addEventListener('click',()=>{
-   modal.style.display="none";
+ const closeModal=()=>{
+  modal.style.display="none";
    modalOverlay.style.display='none'
- })
- modalOverlay.addEventListener('click', ()=>{
-   modal.style.display='none';
-   modalOverlay.style.display='none'
- })
+ }
+ modalClose.addEventListener('click',closeModal)
+ modalOverlay.addEventListener('click',closeModal)
 
+ const links = document.querySelectorAll('a[href^="#"]');
+  for(let elems of links){
+  elems.addEventListener('click', (e)=>{
+    e.preventDefault();    
+    const id =elems.getAttribute('href');  
+    document.querySelector(id).scrollIntoView({
+      behavior:'smooth',
+      block: 'start'
 
+    })
+    
+  })
+}
 
 
 
