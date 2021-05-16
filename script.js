@@ -76,9 +76,16 @@ const showAccordeon =()=>{
   for(let i=0;i< accItems.length; i++){    
      accItems[i].addEventListener('click', (e)=>{
        e.preventDefault();
-             accItems[i].classList.toggle('active');
+            accItems.forEach((elems)=>{
+              if(elems.nextElementSibling && elems.nextElementSibling.className==='element active'){
+               elems.nextElementSibling.classList.remove('active');
+               elems.nextElementSibling.children[1].style.display='none'
+              }
+            })
+
+         accItems[i].classList.toggle('active');
         if(accItems[i].className ==='element active'){
-          console.log('active')
+        
           let accElement =accItems[i].children[1];
             accElement.style.display='block'; 
         }else{
