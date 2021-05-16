@@ -68,6 +68,36 @@ const scrollUp =()=>{
 }
 scrollUp();
 
+//accordion
+const showAccordeon =()=>{
+   let accordeon = document.querySelector('.accordeon'); 
+   let accItems = accordeon.querySelectorAll('.element');  
+   
+  for(let i=0;i< accItems.length; i++){    
+     accItems[i].addEventListener('click', (e)=>{
+       e.preventDefault();
+             accItems[i].classList.toggle('active');
+        if(accItems[i].className ==='element active'){
+          console.log('active')
+          let accElement =accItems[i].children[1];
+            accElement.style.display='block'; 
+        }else{
+            let accElement =accItems[i].children[1];
+           accElement.style.display='none'; 
+        }
+              
+      
+     })
+    
+
+   }
+ 
+  
+  
+
+}
+ 
+showAccordeon();
 
 });
 
