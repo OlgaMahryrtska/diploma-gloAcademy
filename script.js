@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
 
+
 const modal = document.querySelector('.modal-callback'),
       modalOverlay = document.querySelector('.modal-overlay'),
       modalClose = document.querySelector('.modal-close'),
@@ -169,15 +170,7 @@ tel.forEach((phones)=>{
 }
 checkInputs();
 
-//slider carousel
-const carousel =()=>{
-  const arroLeft = document.querySelector('.arrow-left'),
-        arrowRight = document.querySelector('arrow-right'),
-        servicesCarousel =document.querySelector('.services-carousel'),
-        element = servicesCarousel.querySelectorAll('.element');
 
-}
-carousel();
  
 
 //slider
@@ -185,7 +178,7 @@ const slider =()=>{
   const slide = document.querySelectorAll('.item'),
       slider = document.querySelector('.top-slider'),
        title = document.querySelectorAll('.big');
-      console.log(title);
+   
     
   let currentSlide = 0,
   interval;
