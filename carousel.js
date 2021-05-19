@@ -22,8 +22,7 @@ class SliderCarousel {
 
     if(this.prev && this.next){
       this.controlSlider();
-      console.log('there is buttons')
-    }else{
+         }else{
       this.addArrow();
       this.controlSlider();
     }
