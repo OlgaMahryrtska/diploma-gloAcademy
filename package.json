@@ -1,11 +1,21 @@
 {
-  "name": "diploma",
+  "name": "Final_project",
   "version": "1.0.0",
-  "description": "diploma project using java script",
-  "main": "script.js",
+  "description": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config webpack.prod.config.js",
+    "dev": "webpack serve --config webpack.dev.config.js",
+    "watch": "webpack  --watch"
   },
-  "author": "Olga Magrytska",
-  "license": "ISC"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.2",
+    "@babel/preset-env": "^7.14.2",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
 }
